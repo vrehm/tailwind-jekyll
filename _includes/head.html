@@ -4,6 +4,14 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>{% if page.section == "index" %}{{ site.title }}{% else %}{{ page.title | default: site.title }}{% endif %}</title>
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+
+  <!-- toggle mobile navbar -->
+  <style>
+      #menu-toggle:checked + #menu {
+        display: block;
+      }
+  </style>
+
   {% if jekyll.environment == 'production' and site.analytics %}
     {% include analytics.html %}
   {% endif %}
