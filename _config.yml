@@ -18,10 +18,12 @@ description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml.
 baseurl: "" # the subpath of your site if applicable, e.g. /blog
-# url: "https://jekyll-netlify-boilerplate.netlify.com" # the base hostname & protocol for your site, e.g. https://example.com
+url: "https://pam-pam.netlify.com" # the base hostname & protocol for your site, e.g. https://example.com
 
 # Permalink format (/blog/ is ignored for pages)
 permalink: /blog/:title
+timezone: FR
+future: true
 
 # Enable section IDs in frontmatter, useful for identifying current page
 # (used as a hook for styling etc)

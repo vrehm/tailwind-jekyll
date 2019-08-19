@@ -1,13 +1,20 @@
 ---
 layout: default
 title: Mon journal
+permalink: /mon-journal/
 ---
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2 class="text-2xl"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <p>{{ post.excerpt }}</p>
-    </li>
-  {% endfor %}
-</ul>
+<div class="flex flex-wrap">
+  <h1 class="text-white text-4xl font-semibold w-full">
+    Index du blog
+  </h1>
+
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <h2 class="text-2xl"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
