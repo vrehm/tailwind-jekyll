@@ -5,15 +5,14 @@ permalink: /mon-journal/
 ---
 <div class="container mx-auto px-4">
   <div class="flex flex-wrap">
-    <h1>{% include blockquote.html %}</h1>
-    <h1 class="text-gray-500 text-4xl text-center font-semibold w-full">
-      Mon journal
+    <h1 class="text-gray-500 text-4xl text-center font-semibold w-full my-4">
+      Les dernières perles de mon journal
     </h1>
-
-    <div>
-      {% for post in site.posts %}
-        {% include horizontal-post-card.html %}
-      {% endfor %}
-    </div>
+    <cite class="mt-4 mb-8">{% include blockquote.html %}</cite>
+    <section id="posts-horizontal-cards">
+        {% for post in site.posts %}
+          {% include horizontal-post-card.html %}
+        {% endfor %}
+    </section>
   </div>
 </div>

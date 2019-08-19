@@ -2,4 +2,8 @@
 
 @tailwind components;
 
+.stylistic-quote {
+  @apply text-6xl right-0 mr-2 hidden font-mono text-gray-500 absolute top-0 leading-none;
+}
+
 @tailwind utilities;
