@@ -5,5 +5,6 @@ var menuItems = document.getElementById('menu-items');
 
 
 menuBtn.addEventListener("click", (event) => {
-  menuItems.classList.toggle("hidden");
+  menuItems.style.display = menuItems.style.display === 'none' ? '' : 'none';
 });
+
