@@ -6,15 +6,12 @@ permalink: /mon-journal/
 
 <div class="flex flex-wrap">
   <h1 class="text-white text-4xl font-semibold w-full">
-    Index du blog
+    Mon journal
   </h1>
 
-  <ul>
+  <div>
     {% for post in site.posts %}
-      <li>
-        <h2 class="text-2xl"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        <p>{{ post.excerpt }}</p>
-      </li>
+      {% include horizontal-post-card.html %}
     {% endfor %}
-  </ul>
+  </div>
 </div>
