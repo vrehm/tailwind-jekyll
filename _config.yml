@@ -80,3 +80,6 @@ exclude:
   - README.md
   - src
   - tailwind.config.js
+
+plugins:
+  - octopress-debugger
