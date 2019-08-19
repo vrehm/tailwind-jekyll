@@ -8,3 +8,4 @@ menuBtn.addEventListener("click", (event) => {
   menuItems.style.display = menuItems.style.display === 'none' ? '' : 'none';
 });
 
+console.log("hello thibault");

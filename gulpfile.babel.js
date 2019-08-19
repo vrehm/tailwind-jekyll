@@ -4,6 +4,10 @@ import { spawn } from "child_process";
 import cssnano from "cssnano";
 import { dest, series, src, task, watch } from "gulp";
 import gulpif from "gulp-if";
+import concat from "gulp-concat";
+import babel from "gulp-babel";
+import plumber from "gulp-plumber";
+import uglify from "gulp-uglify";
 import postcss from "gulp-postcss";
 import purgecss from "gulp-purgecss";
 import sourcemaps from "gulp-sourcemaps";
@@ -14,6 +18,8 @@ const rawStylesheet = "src/style.css";
 const siteRoot = "_site";
 const cssRoot = `${siteRoot}/assets/css/`;
 const tailwindConfig = "tailwind.config.js";
+const rawJs = "src/main.js";
+const jsRoot = `${siteRoot}/assets/js/`;
 
 const devBuild =
   (process.env.NODE_ENV || "development").trim().toLowerCase() ===
@@ -67,6 +73,25 @@ task("processStyles", done => {
     .pipe(dest(cssRoot));
 });
 
+task("processJs", done => {
+  browserSync.notify("Concatening and uglifying JS...");
+
+  return src(rawJs)
+    // Stop the process if an error is thrown.
+    .pipe(plumber())
+    // Transpile the JS code using Babel's preset-env.
+    .pipe(babel({
+      presets: [
+        ['@babel/env', {
+          modules: false
+        }]
+      ]
+    }))
+    .pipe(concat('main.js'))
+    .pipe(uglify())
+    .pipe(dest(jsRoot));
+});
+
 task("startServer", () => {
   browserSync.init({
     files: [siteRoot + "/**"],
@@ -95,7 +120,7 @@ task("startServer", () => {
   );
 });
 
-const buildSite = series("buildJekyll", "processStyles");
+const buildSite = series("buildJekyll", "processStyles", "processJs");
 
 exports.serve = series(buildSite, "startServer");
 exports.default = series(buildSite);
