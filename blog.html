@@ -12,7 +12,7 @@ pagination:
     </h1>
     <cite class="mt-4 mb-8">{% include blockquote.html %}</cite>
     <nav id="blog-pagination" class="w-full">{% include pagination.html %}</nav>
-    <section id="posts-horizontal-cards">
+    <section id="posts-horizontal-cards" class="w-full">
         {% for post in paginator.posts %}
           {% include horizontal-post-card.html %}
         {% endfor %}
