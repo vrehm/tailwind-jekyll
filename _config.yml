@@ -1,18 +1,3 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Atelier Pam Pam
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -21,7 +6,19 @@ baseurl: "" # the subpath of your site if applicable, e.g. /blog
 url: "https://pam-pam.netlify.com" # the base hostname & protocol for your site, e.g. https://example.com
 
 # Permalink format (/blog/ is ignored for pages)
-permalink: /blog/:title
+permalink: /blog/:year/:month/:title
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 2
+  permalink: '/page/:num/'
+  title: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+# Time Zone and future publications
 timezone: FR
 future: true
 
@@ -34,15 +31,6 @@ netlifycms: true
 
 # set to 'true' to enable Google Analytics tracking code in production builds
 analytics: false
-
-# # Compress CSS
-# sass:
-#   style: compressed
-#   sass_dir: _sass
-
-# # Compress HTML (in liquid via layouts/compress.html)
-# compress_html:
-#   clippings: all
 
 # set some common post defaults
 defaults:
@@ -82,3 +70,15 @@ exclude:
   - README.md
   - src
   - tailwind.config.js
+
+plugins:
+  - jekyll-paginate-v2
+
+# # Compress CSS
+# sass:
+#   style: compressed
+#   sass_dir: _sass
+
+# # Compress HTML (in liquid via layouts/compress.html)
+# compress_html:
+#   clippings: all

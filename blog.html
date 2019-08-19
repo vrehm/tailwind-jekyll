@@ -2,6 +2,8 @@
 layout: default
 title: Mon journal
 permalink: /mon-journal/
+pagination:
+  enabled: true
 ---
 <div class="container mx-auto px-4">
   <div class="flex flex-wrap">
@@ -9,8 +11,9 @@ permalink: /mon-journal/
       Les dernières perles de mon journal
     </h1>
     <cite class="mt-4 mb-8">{% include blockquote.html %}</cite>
+    <nav id="blog-pagination" class="w-full">{% include pagination.html %}</nav>
     <section id="posts-horizontal-cards">
-        {% for post in site.posts %}
+        {% for post in paginator.posts %}
           {% include horizontal-post-card.html %}
         {% endfor %}
     </section>
