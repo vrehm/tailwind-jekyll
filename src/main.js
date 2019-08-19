@@ -3,9 +3,6 @@
 var menuBtn = document.getElementById('burger-btn');
 var menuItems = document.getElementById('menu-items');
 
-
 menuBtn.addEventListener("click", (event) => {
-  menuItems.style.display = menuItems.style.display === 'none' ? '' : 'none';
+  menuItems.classList.toggle('invisible');
 });
-
-console.log("hello thibault");
