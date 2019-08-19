@@ -22,6 +22,8 @@ url: "https://pam-pam.netlify.com" # the base hostname & protocol for your site,
 
 # Permalink format (/blog/ is ignored for pages)
 permalink: /blog/:title
+timezone: FR
+future: true
 
 # Enable section IDs in frontmatter, useful for identifying current page
 # (used as a hook for styling etc)
