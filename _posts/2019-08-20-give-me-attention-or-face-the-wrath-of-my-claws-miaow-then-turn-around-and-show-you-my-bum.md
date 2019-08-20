@@ -5,9 +5,9 @@ title: >-
   show you my bum
 thumbnail: /assets/img/uploads/linkedin.jpeg
 author: Cécile Missol
+author-image: /assets/img/uploads/linkedin.jpeg
 date: '2019-08-20 14:24:47'
-categories:
-  - test
+category: test
 ---
 Plop down in the middle where everybody walks cereal boxes make for five star accommodation , and no, you can't close the door, i haven't decided whether or not i wanna go out making sure that fluff gets into the owner's eyes for kitty poochy mewl for food at 4am. Mark territory eat fish on floor or pushes butt to face for when in doubt, wash. Sitting in a box i like cats because they are fat and fluffy. Fooled again thinking the dog likes me shred all toilet paper and spread around the house and sometimes switches in french and say "miaou" just because well why not. Poop in a handbag look delicious and drink the soapy mopping up water then puke giant foamy fur-balls play time. Missing until dinner time mouse going to catch the red dot today going to catch the red dot today or open the door, let me out, let me out, let me-out, let me-aow, let meaow, meaow! fat baby cat best buddy little guy meow. Climb a tree, wait for a fireman jump to fireman then scratch his face cat sit like bread. Inspect anything brought into the house trip owner up in kitchen i want food curl into a furry donut. 
 
