@@ -1,0 +1,38 @@
+<footer class="flex flex-wrap bg-gray-700">
+    <div id="footer-menu" class="border border-black">
+      <a href="/" class="flex justify-center w-full">
+        <img class="h-24" src="https://res.cloudinary.com/dpnte3nr8/image/upload/v1566283523/pampam/logo-white_ydwah6.svg" alt="Logo de la marque">
+      </a>
+      <ul class="py-4 px-8">
+        {% for item in site.data.footer %}
+          <li><a class="font-serif text-base font-semibold block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-gray-200 mr-8  shadow-xl border-b-2 border-transparent hover:border-gray-100 last:mr-4" href="{{ item.link }}">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div id="showroom-address" class="border border-black">
+      <div class="w-full text-center md:p-12">
+        <div class="w-full font-serif text-base font-semibold text-gray-100 hover:text-gray-200 border-b-2 border-transparent">
+          Mon Atelier & Boutique
+        </div>
+        <div class="my-12 min-w-full"><a target="_blank" href="https://goo.gl/maps/UrL4bsbV2YLLCYpe6" class="bg-gray-900 hover:bg-transparent border-2 border-transparent hover:border-gray-900 text-white hover:text-gray-900 font-bold font-serif py-4 px-8 bg-gray-900 rounded-sm text-sm">Accéder à l'Itinéraire</a></div>
+        <div class="w-full font-serif text-base font-semibold text-gray-100 hover:text-gray-200 border-b-2 border-transparent">
+          Les Puces du Canal
+          <br>3 Rue Eugène Pottier, 69100 Villeurbanne
+        </div>
+      </div>
+    </div>
+
+    <div id="contact-details" class="border border-black">
+      <div class="flex">
+        <div class="w-1/3">Picto tête</div>
+        <div class="w-2/3">06 46 17 34 02</div>
+      </div>
+      <div class="w-full">atelierpampam (@) gmail.com</div>
+      <div class="flex">
+        <div class="w-1/3">Réseau 1</div>
+        <div class="w-1/3">Réseau 2</div>
+        <div class="w-1/3">Réseau 3</div>
+      </div>
+    </div>
+</footer>
