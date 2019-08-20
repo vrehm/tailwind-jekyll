@@ -31,7 +31,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Author Image", name: "author-image", widget: "image", default: "/assets/img/uploads/linkedin.jpeg"}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
-      - {label: "Categories", name: "categories", widget: "list", required: false}
+      - {label: "Category", name: "category", widget: "string", required: false}
     # PAGES
   - name: "page"
     label: "Page"
