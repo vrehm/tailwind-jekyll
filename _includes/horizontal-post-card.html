@@ -1,6 +1,6 @@
 <article class="max-w-sm w-full lg:max-w-full lg:flex my-4">
-  <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('https://tailwindcss.com/img/card-left.jpg')" title="Woman holding a mug">
-  </div>
+  <a href="{{ post.url }}" class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('https://tailwindcss.com/img/card-left.jpg')" title="Woman holding a mug">
+  </a>
   <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col flex-grow justify-between leading-normal">
     <div class="mb-8">
 <!--       <p class="text-sm text-gray-600 flex items-center">
@@ -9,7 +9,7 @@
         </svg>
         Members only
       </p> -->
-      <div class="text-gray-900 font-bold text-xl mb-2">{{ post.title | capitalize }}</div>
+      <a href="{{ post.url }}" class="text-gray-900 font-bold text-xl mb-2">{{ post.title | capitalize }}</a>
       <p class="text-gray-700 text-base">{{ post.excerpt | capitalize }}</p>
     </div>
     <div class="flex items-center">
