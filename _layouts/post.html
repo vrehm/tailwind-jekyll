@@ -1,7 +1,21 @@
 ---
-layout: default
+layout: blog
 ---
-
-<h2>{{ page.title }}</h2>
-
-{{ content }}
+<div class="container mx-auto px-32">
+  <div class="flex flex-wrap">
+    <h1 class="text-gray-500 text-4xl text-left font-semibold w-full my-4">
+      {{ page.title | capitalize }}
+    </h1>
+    <div class="flex items-center w-full justify-between">
+      {% if page.category %}
+        <span class="rounded-full my-4 px-4 bg-gray-800 text-gray-500 p-2 rounded leading-none flex items-center">{{ page.category | capitalize }}</span>
+      {% endif %}
+      <p class="text-sm text-gray-600">
+        Publié le {{ page.date | date: "%d/%m/%Y" }} par <span class="text-gray-900 leading-none">{{ page.author }}</span>
+      </p>
+    </div>
+    <main class="mt-4 mb-8 text-justify">
+      {{ content }}
+    </main>
+  </div>
+</div>
