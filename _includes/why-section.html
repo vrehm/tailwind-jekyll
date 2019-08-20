@@ -1,14 +1,7 @@
-<div class="container mx-auto py-40 flex flex-wrap">
-  <div class="w-full md:w-1/2 overflow-hidden text-center">
-    <img class="w-full" src="https://res.cloudinary.com/dpnte3nr8/image/upload/v1566283540/pampam/photo-portrait_natmvy.jpg" alt="Portait de la créatrice, cécile">
-    <div class="px-6 py-4">
-      <div class="italic text-2xl font-serif mt-8 mb-8">Moi, c'est Cécile...</div>
-      <p class="text-gray-700 font-serif leading-relaxed text-base mb-10">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-      </p>
-      <a href="" class="bg-gray-900 hover:bg-transparent border-2 border-transparent hover:border-gray-900 text-white hover:text-gray-900 font-bold font-serif py-4 px-8 bg-gray-900 rounded-sm">Mon Blog</a>
-    </div>
-  </div>
+<div class="container mx-auto py-40 flex flex-wrap  md:flex-row-reverse">
+
+  <!-- left part -->
+
   <div class="w-full md:w-1/2 bg-transparent p-24 self-center text-center text-gray-700 text-lg font-serif italic">
     <div class="">
       <h2>A l'atelier Pam Pam, je promeut un art de vivre discret, élégant et durable.</h2>
@@ -36,4 +29,19 @@
       </div>
     </div>
   </div>
+
+  <!-- right part -->
+
+  <div class="w-full md:w-1/2 overflow-hidden text-center">
+    <img class="w-full" src="https://res.cloudinary.com/dpnte3nr8/image/upload/v1566283540/pampam/photo-portrait_natmvy.jpg" alt="Portait de la créatrice, cécile">
+    <div class="px-6 py-4">
+      <div class="italic text-2xl font-serif mt-8 mb-8">Moi, c'est Cécile...</div>
+      <p class="text-gray-700 font-serif leading-relaxed text-base mb-10">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+      </p>
+      <!-- btn  -->
+      <a href="{% link blog.html %}" class="bg-gray-900 hover:bg-transparent border-2 border-transparent hover:border-gray-900 text-white hover:text-gray-900 font-bold font-serif py-4 px-8 bg-gray-900 rounded-sm">Mon Blog</a>
+    </div>
+  </div>
+
 </div>
