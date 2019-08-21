@@ -1,1 +1,1 @@
-environment = { DEMO_VAR = ${DEMO_VAR} }
+environment = { DEMO_VAR = $DEMO_VAR }
