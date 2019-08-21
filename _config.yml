@@ -82,3 +82,6 @@ plugins:
 # # Compress HTML (in liquid via layouts/compress.html)
 # compress_html:
 #   clippings: all
+#
+testi: ENV_TESTI
+testa: $TESTI
