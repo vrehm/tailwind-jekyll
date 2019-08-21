@@ -14,7 +14,7 @@
       <div class="flex-grow"><h3 class="text-gray-600 font-serif leading-relaxed text-base">Faites-vous livrer partout en France</h3><span class="fas fa-truck-loading"></span></div>
     </div>
   </div>
-  <div id="instafeed -mx-2">
+<!--   <div id="instafeed-original">
     <div class="flex -mx-2">
       <div class="w-1/3 px-2">
         <div class="relative w-full pb-full">
@@ -66,5 +66,29 @@
         </div>
       </div>
     </div>
+  </div> -->
+  <div class="px-2">
+    <div class="flex flex-wrap -mx-2" id="instafeed">
+    </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded",function(){
+    var userFeed = new Instafeed({
+      get: 'user',
+      userId: '{{ site.env.userId }}',
+      clientId: '{{ site.env.clientId }}',
+      accessToken: '{{ site.env.accessToken }}',
+      resolution: 'standard_resolution',
+      {% raw %}
+      template: '<a href="{{link}}" target="_blank" class="w-1/3 px-2 py-2"><div class="w-64 h-64 bg-cover bg-center" style="background-image: url(\'{{image}}\')"></div><div class="likes">&hearts; {{likes}}</div></a>',
+      {% endraw %}
+      sortBy: 'most-recent',
+      limit: 15,
+      links: false
+    });
+    userFeed.run();
+  });
+  console.log("{{ site.env.DEMO_VAR }}");
+</script>
