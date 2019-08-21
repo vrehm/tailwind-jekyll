@@ -6,8 +6,9 @@ module Jekyll
     def generate(site)
       # Load up .env variables.
       site.config['env'] = Dotenv.load('.env')
-      site.config['env']['DEMO_VAR'] = ENV['DEMO_VAR']
-      site.config['env']['TESTI'] = ENV['TESTI']
+      ENV.each do |key, value|
+        site.config['env'][key] = value
+      end
       print 'dotenv variables: '
       print site.config['env']
     end
