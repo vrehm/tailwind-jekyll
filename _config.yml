@@ -43,7 +43,10 @@ defaults:
       section: "post" # set the root section name
 
 # Build settings
-markdown: kramdown
+markdown: CommonMark
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table"]
 
 # Kramdown options
 kramdown:
@@ -80,6 +83,7 @@ exclude:
 plugins:
   - jekyll-paginate-v2
   - jekyll-compress-images
+  - jekyll-commonmark
 
 compress_images:
   images_path: "assets/*.{gif,png,jpg,jpeg,svg}"
