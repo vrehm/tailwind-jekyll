@@ -53,21 +53,27 @@ kramdown:
 # Include in processing (e.g. Netlify directives)
 # Uncomment before use
 
-#include:
-#  - _redirects
-#  - _headers
+include:
+ - _redirects
+ - _headers
 
 # Exclude from processing.
 # The following items will not be processed.
 exclude:
+  - .all-contrutorsrc
+  - .babelrc
+  - .gitignore
+  - _compress_images_cache.yml
+  - .env
   - Gemfile
   - Gemfile.lock
   - gulpfile.babel.js
   - LICENSE.md
   - node_modules
-  - package.json
   - package-lock.json
+  - package.json
   - README.md
+  - renovate.json
   - src
   - tailwind.config.js
 
