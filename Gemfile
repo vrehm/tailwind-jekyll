@@ -10,6 +10,7 @@ group :jekyll_plugins do
   gem 'jekyll-commonmark'
   gem 'jekyll-compress-images'
   gem 'jekyll-feed'
+  gem 'jekyll-google-tag-manager'
   gem 'jekyll-include-cache'
   gem 'jekyll-paginate-v2'
 end

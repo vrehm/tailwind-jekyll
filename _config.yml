@@ -31,7 +31,10 @@ section: true
 netlifycms: true
 
 # set to 'true' to enable Google Analytics tracking code in production builds
-analytics: false
+analytics: true
+google:
+  tag_manager:
+    container_id: GTM-PT22T8F
 
 # set some common post defaults
 defaults:
@@ -85,6 +88,7 @@ exclude:
 plugins:
   - jekyll-commonmark
   - jekyll-compress-images
+  - jekyll-google-tag-manager
   - jekyll-include-cache
   - jekyll-paginate-v2
 
