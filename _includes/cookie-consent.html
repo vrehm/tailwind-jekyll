@@ -1,6 +1,17 @@
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="true"></script>
 <script>
   document.addEventListener("DOMContentLoaded",function(){
+    addCSS('https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css');
+    // Include CSS file
+    function addCSS(filename){
+     var head = document.getElementsByTagName('head')[0];
+     var style = document.createElement('link');
+     style.href = filename;
+     style.type = 'text/css';
+     style.rel = 'stylesheet';
+     head.append(style);
+    }
+
     window.cookieconsent.initialise({
       "palette": {
         "popup": {
