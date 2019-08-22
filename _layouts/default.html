@@ -3,15 +3,15 @@
 <!doctype html>
 <html class="no-js" lang="fr">
 
-{% include head.html %}
+{% include_cached head.html %}
 
   <body>
-    {% include hero-section.html %}
-    {% include why-section.html %}
-    {% include instafeed.html %}
-    {% include newsletter.html %}
+    {% include_cached hero-section.html %}
+    {% include_cached why-section.html %}
+    {% include_cached instafeed.html %}
+    {% include_cached newsletter.html %}
     <main>{{ content }}</main>
-    {% include footer.html %}
+    {% include_cached footer.html %}
   </body>
   <script type="text/javascript" src="/assets/js/main.js"></script>
 </html>

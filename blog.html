@@ -10,11 +10,11 @@ pagination:
 <!--     <h1 class="text-gray-500 text-4xl text-center font-semibold w-full my-4">
       Les dernières perles de mon journal
     </h1> -->
-    <cite class="mt-8 mb-8">{% include blockquote.html %}</cite>
-    <nav id="blog-pagination" class="w-full">{% include pagination.html %}</nav>
+    <cite class="mt-8 mb-8">{% include_cached blockquote.html %}</cite>
+    <nav id="blog-pagination" class="w-full">{% include_cached pagination.html %}</nav>
     <section id="posts-horizontal-cards" class="w-full">
         {% for post in paginator.posts %}
-          {% include horizontal-post-card.html %}
+          {% include_cached horizontal-post-card.html %}
         {% endfor %}
     </section>
   </div>
