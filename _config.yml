@@ -73,6 +73,8 @@ exclude:
   - .gitignore
   - .ruby-version
   - _compress_images_cache.yml
+  - _plugins/config_cloudinary.rb
+  - _plugins/upload_assets_to_cloudinary.rb
   - Gemfile
   - Gemfile.lock
   - gulpfile.babel.js
@@ -86,6 +88,7 @@ exclude:
   - tailwind.config.js
 
 plugins:
+  - jekyll-cloudinary
   - jekyll-commonmark
   - jekyll-compress-images
   - jekyll-google-tag-manager
@@ -96,6 +99,26 @@ compress_images:
   images_path: "assets/*.{gif,png,jpg,jpeg,svg}"
 imageoptim:
   verbose: true
+
+cloudinary:
+  cloud_name: atelierpampam
+  presets:
+    default:
+      min_width: 320
+      max_width: 1280
+      fallback_max_width: 640
+      steps: 5
+      sizes: "(min-width: 50rem) 50rem, 90vw"
+      attributes:
+        loading: "eager"
+    default_lazy:
+      min_width: 320
+      max_width: 1280
+      fallback_max_width: 640
+      steps: 5
+      sizes: "(min-width: 50rem) 50rem, 90vw"
+      attributes:
+        loading: "lazy"
 
 # # Compress CSS
 # sass:
