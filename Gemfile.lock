@@ -13,6 +13,7 @@ GEM
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
     exifr (1.3.6)
+    fastimage (2.1.5)
     ffi (1.11.1)
     forwardable-extended (2.6.0)
     fspath (3.1.2)
@@ -43,6 +44,9 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
+    jekyll-cloudinary (1.14.1)
+      fastimage (~> 2.0)
+      jekyll (>= 3.6, < 5)
     jekyll-commonmark (1.3.1)
       commonmarker (~> 0.14)
       jekyll (>= 3.7, < 5.0)
@@ -92,6 +96,7 @@ PLATFORMS
 DEPENDENCIES
   dotenv
   jekyll (~> 3.8, >= 3.8.3)
+  jekyll-cloudinary
   jekyll-commonmark
   jekyll-compress-images
   jekyll-feed
