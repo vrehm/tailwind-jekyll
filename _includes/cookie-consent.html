@@ -1,0 +1,23 @@
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="true"></script>
+<script>
+  document.addEventListener("DOMContentLoaded",function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#eb6c44",
+          "text": "#ffffff"
+        },
+        "button": {
+          "background": "#f5d948"
+        }
+      },
+      "theme": "edgeless",
+      "position": "bottom-left",
+      "content": {
+        "message": "Ce site utilise des cookies pour améliorer votre expérience sur ce site. Nous recueillons les informations nécessaires dans le cadre d'un service de chat et pour analyser la performance des différentes pages du site.",
+        "dismiss": "J'ai compris",
+        "link": "En savoir plus sur les cookies"
+      }
+    });
+  });
+</script>

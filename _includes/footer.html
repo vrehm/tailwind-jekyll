@@ -36,3 +36,7 @@
       </div>
     </div>
 </footer>
+
+{% if jekyll.environment == 'production' and site.analytics %}
+  {% include_cached cookie-consent.html %}
+{% endif %}
