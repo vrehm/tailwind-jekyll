@@ -73,6 +73,8 @@ exclude:
   - .gitignore
   - .ruby-version
   - _compress_images_cache.yml
+  - _plugins/config_cloudinary.rb
+  - _plugins/upload_assets_to_cloudinary.rb
   - Gemfile
   - Gemfile.lock
   - gulpfile.babel.js
