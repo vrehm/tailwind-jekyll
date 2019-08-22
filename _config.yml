@@ -4,6 +4,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml.
 baseurl: "" # the subpath of your site if applicable, e.g. /blog
 url: "https://pam-pam.netlify.com" # the base hostname & protocol for your site, e.g. https://example.com
+incremental: true
 
 # Permalink format (/blog/ is ignored for pages)
 permalink: /blog/:year/:month/:title
@@ -43,7 +44,10 @@ defaults:
       section: "post" # set the root section name
 
 # Build settings
-markdown: kramdown
+markdown: CommonMark
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table"]
 
 # Kramdown options
 kramdown:
@@ -53,27 +57,35 @@ kramdown:
 # Include in processing (e.g. Netlify directives)
 # Uncomment before use
 
-#include:
-#  - _redirects
-#  - _headers
+include:
+ - _redirects
+ - _headers
 
 # Exclude from processing.
 # The following items will not be processed.
 exclude:
+  - .all-contrutorsrc
+  - .babelrc
+  - .gitignore
+  - _compress_images_cache.yml
+  - .env
   - Gemfile
   - Gemfile.lock
   - gulpfile.babel.js
   - LICENSE.md
   - node_modules
-  - package.json
   - package-lock.json
+  - package.json
   - README.md
+  - renovate.json
   - src
   - tailwind.config.js
 
 plugins:
-  - jekyll-paginate-v2
+  - jekyll-commonmark
   - jekyll-compress-images
+  - jekyll-include-cache
+  - jekyll-paginate-v2
 
 compress_images:
   images_path: "assets/*.{gif,png,jpg,jpeg,svg}"
