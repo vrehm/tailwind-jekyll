@@ -4,6 +4,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml.
 baseurl: "" # the subpath of your site if applicable, e.g. /blog
 url: "https://pam-pam.netlify.com" # the base hostname & protocol for your site, e.g. https://example.com
+incremental: true
 
 # Permalink format (/blog/ is ignored for pages)
 permalink: /blog/:year/:month/:title
