@@ -64,11 +64,12 @@ include:
 # Exclude from processing.
 # The following items will not be processed.
 exclude:
-  - .all-contrutorsrc
+  - .all-contributorsrc
   - .babelrc
-  - .gitignore
-  - _compress_images_cache.yml
   - .env
+  - .gitignore
+  - .ruby-version
+  - _compress_images_cache.yml
   - Gemfile
   - Gemfile.lock
   - gulpfile.babel.js
