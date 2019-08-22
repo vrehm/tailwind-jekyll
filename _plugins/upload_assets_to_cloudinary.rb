@@ -1,6 +1,3 @@
-require 'rubygems'
-require 'bundler/setup'
-
 require 'cloudinary'
 require 'cloudinary/uploader'
 require 'cloudinary/utils'
@@ -25,23 +22,40 @@ if Cloudinary.config.api_key.blank?
   exit
 end
 
-puts "* Uploading sample image files, please wait..."
+def self.exists?(public_id, options={})
+  cloudinary_url = Cloudinary::Utils.cloudinary_url(public_id, options)
+  begin
+    code = RestClient::Request.execute(:method => :head, :url => cloudinary_url, :timeout =>     5).code
+    code >= 200 && code < 300
+    rescue RestClient::ResourceNotFound
+    return false
+  end
+end
+
+puts "* Uploading assets image files, please wait..."
 
 uploads = {}
 
 Dir.children("assets").each do |file|
-  uploads[:"#{file}"] = Cloudinary::Uploader.upload "assets/#{file}",
-  :tags => "website_assets",
-  :folder => "website_assets",
-  :public_id => "#{File.basename(file,File.extname(file))}" unless file == 'img'
+  next if file == 'img'
+  public_id = 'website_assets/' + File.basename(file,File.extname(file))
+  unless Cloudinary::Uploader.exists?(public_id)
+    uploads[:"#{file}"] = Cloudinary::Uploader.upload "assets/#{file}",
+    :tags => "website_assets",
+    :folder => "website_assets",
+    :public_id => public_id
+  end
 end
 
 puts "* Done."
 
-puts
-puts "* #{uploads.length} images were uploaded and are now available in the cloud."
-uploads.each_value.with_index do |upload, index|
-  puts "> Upload \##{index+1}:"
-  puts "  Public ID: #{upload['public_id']}"
-  puts "  URL: #{upload['url']}"
+if uploads.length == 0
+  puts "Everything is already on the cloud."
+else
+  puts "* #{uploads.length} images were uploaded and are now available in the cloud."
+  uploads.each_value.with_index do |upload, index|
+    puts "> Upload \##{index+1}:"
+    puts "  Public ID: #{upload['public_id']}"
+    puts "  URL: #{upload['url']}"
+  end
 end
