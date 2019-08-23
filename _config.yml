@@ -102,8 +102,8 @@ plugins:
   - jekyll-sitemap
 
 favicon:
-  source: logo.svg
-  path: /assets/
+  source: assets/favicon.svg
+  path: assets/img/favicon
 
 compress_images:
   images_path: "assets/*.{gif,png,jpg,jpeg,svg}"
