@@ -94,6 +94,8 @@ plugins:
   - jekyll-google-tag-manager
   - jekyll-include-cache
   - jekyll-paginate-v2
+  - jekyll-feed
+  - jekyll-sitemap
 
 compress_images:
   images_path: "assets/*.{gif,png,jpg,jpeg,svg}"

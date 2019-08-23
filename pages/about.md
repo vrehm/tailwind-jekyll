@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+sitemap: false
 permalink: /about
 section: about
 intro_paragraph: >

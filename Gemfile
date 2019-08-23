@@ -15,5 +15,6 @@ group :jekyll_plugins do
   gem 'jekyll-google-tag-manager'
   gem 'jekyll-include-cache'
   gem 'jekyll-paginate-v2'
+  gem 'jekyll-sitemap'
 end
 
