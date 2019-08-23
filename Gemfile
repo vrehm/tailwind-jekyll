@@ -11,6 +11,7 @@ group :jekyll_plugins do
   gem 'jekyll-cloudinary'
   gem 'jekyll-commonmark'
   gem 'jekyll-compress-images'
+  gem 'jekyll-favicon', '~> 0.2.7'
   gem 'jekyll-feed'
   gem 'jekyll-google-tag-manager'
   gem 'jekyll-include-cache'
