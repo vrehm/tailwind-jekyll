@@ -3,13 +3,9 @@
 <!doctype html>
 <html class="no-js" lang="fr">
 
-{% include_cached head.html %}
+{% include head.html %}
 
   <body>
-    {% include_cached hero-section.html %}
-    {% include_cached why-section.html %}
-    {% include_cached instafeed.html %}
-    {% include_cached newsletter.html %}
     <main>{{ content }}</main>
     {% include_cached footer.html %}
     {% if jekyll.environment == 'production' and site.analytics %}
@@ -17,5 +13,5 @@
     {% endif %}
   </body>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
-  <script type="text/javascript" src="/assets/js/main.js"></script>
+  <script type="text/javascript" async src="/assets/js/main.js"></script>
 </html>

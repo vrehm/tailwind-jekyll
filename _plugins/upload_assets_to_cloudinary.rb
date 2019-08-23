@@ -37,12 +37,14 @@ puts "* Uploading assets image files, please wait..."
 uploads = {}
 
 Dir.children("assets").each do |file|
+  base_folder = 'pam_pam_assets/'
+  base_folder_2 = base_folder + 'pam_pam_assets/'
   next if file == 'img'
-  public_id = 'website_assets/website_assets/' + File.basename(file,File.extname(file))
-  unless Cloudinary::Uploader.exists?(public_id)
+  puts public_id = File.basename(file,File.extname(file))
+  unless Cloudinary::Uploader.exists?(public_id) || Cloudinary::Uploader.exists?(base_folder + public_id) || Cloudinary::Uploader.exists?(base_folder_2 + public_id)
     uploads[:"#{file}"] = Cloudinary::Uploader.upload "assets/#{file}",
-    :tags => "website_assets",
-    :folder => "website_assets",
+    :tags => "pam_pam_assets",
+    :folder => "pam_pam_assets",
     :public_id => public_id
   end
 end
