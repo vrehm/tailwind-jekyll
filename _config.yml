@@ -124,6 +124,12 @@ cloudinary:
       sizes: "(min-width: 50rem) 50rem, 90vw"
       attributes:
         loading: "lazy"
+    logo:
+      min_width: 80
+      max_width: 160
+      fallback_max_width: 120
+      steps: 3
+      figure: never
 
 # # Compress CSS
 # sass:
