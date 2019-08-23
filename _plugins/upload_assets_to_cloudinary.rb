@@ -38,7 +38,7 @@ uploads = {}
 
 Dir.children("assets").each do |file|
   next if file == 'img'
-  public_id = 'website_assets/' + File.basename(file,File.extname(file))
+  public_id = 'website_assets/website_assets/' + File.basename(file,File.extname(file))
   unless Cloudinary::Uploader.exists?(public_id)
     uploads[:"#{file}"] = Cloudinary::Uploader.upload "assets/#{file}",
     :tags => "website_assets",
