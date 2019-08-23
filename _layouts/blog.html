@@ -7,8 +7,7 @@
 
   <body>
     {% include_cached blog-hero-section.html %}
-
-      <main>{{ content }}</main>
+    <main>{{ content }}</main>
     {% include_cached footer.html %}
     {% if jekyll.environment == 'production' and site.analytics %}
       {% include_cached gtm-body.html %}

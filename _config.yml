@@ -1,8 +1,7 @@
 title: Atelier Pam Pam
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml.
-baseurl: "" # the subpath of your site if applicable, e.g. /blog
+  Brocante poétique pour intérieurs singuliers.
+baseurl: "/" # the subpath of your site if applicable, e.g. /blog
 url: "https://pam-pam.netlify.com" # the base hostname & protocol for your site, e.g. https://example.com
 incremental: true
 
@@ -95,6 +94,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-paginate-v2
   - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-sitemap
 
 compress_images:

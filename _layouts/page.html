@@ -1,9 +1,15 @@
 ---
-layout:
 ---
+<!doctype html>
+<html class="no-js" lang="fr">
 
-<h2>{{ page.title }}</h2>
+{% include_cached head.html %}
 
-{% include_cached page-intro.html %}
-
-{{ content }}
+  <body>
+    <main>{{ content }}</main>
+    {% include_cached footer.html %}
+    {% if jekyll.environment == 'production' and site.analytics %}
+      {% include_cached gtm-body.html %}
+    {% endif %}
+  </body>
+</html>
