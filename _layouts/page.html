@@ -6,8 +6,9 @@
 {% include head.html %}
 
   <body>
-    {% capture subtitle %}{{ page.title }}{% endcapture %}
-    {% include_cached non-index-hero-section.html subtitle=subtitle %}
+    {% comment %}{% capture subtitle %}{{ page.title }}{% endcapture %}
+    {% include_cached non-index-hero-section.html subtitle=subtitle %}{% endcomment %}
+    {% include_cached non-index-hero-section.html %}
     <main>{{ content }}</main>
     {% include_cached footer.html %}
     {% if jekyll.environment == 'production' and site.analytics %}
