@@ -21,14 +21,14 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image", default: "/assets/img/uploads/linkedin.jpeg"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", default: "/assets/img/uploads/cecile-missol-portrait.jpeg"}
       - label: "Author"
         name: "author"
         widget: "select"
         options:
           - { label: "Cécile Missol", value: "Cécile Missol" }
           - default: {label: "Cécile Missol", value: "Cécile Missol"}
-      - {label: "Author Image", name: "author-image", widget: "image", default: "/assets/img/uploads/linkedin.jpeg"}
+      - {label: "Author Image", name: "author-image", widget: "image", default: "/assets/img/uploads/cecile-missol-portrait.jpeg"}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
       - {label: "Category", name: "category", widget: "string", required: false}
