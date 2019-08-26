@@ -1,0 +1,3 @@
+# Redirect default Netlify subdomain to primary domain
+http://pam-pam.netlify.com/* http://www.atelierpampam.fr/:splat 301!
+https://pam-pam.netlify.com/* https://www.atelierpampam.fr/:splat 301!
