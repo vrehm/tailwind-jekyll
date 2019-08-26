@@ -1,7 +1,7 @@
 <nav class="lg:px-16 px-6 lg:py-6 py-4 flex items-center justify-between flex-wrap bg-transparent">
   <div class="flex items-center flex-shrink-0 text-white mr-6">
     <a href="{% link index.html %}">
-      <img class="h-24" src="https://res.cloudinary.com/dpnte3nr8/image/upload/v1566283523/pampam/logo-white_ydwah6.svg" alt="Logo de la marque">
+      <img class="h-8" src="/assets/logo-pampam-white.png" alt="Logo de la marque Atelier Pam Pam">
     </a>
   </div>
   <div class="block lg:hidden">
@@ -13,7 +13,7 @@
     <div class="text-sm text-center lg:text-right lg:flex-grow">
       <!-- take nav items from navigation.yml -->
       {% for item in site.data.navigation %}
-        <a class="font-serif text-base font-semibold block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-gray-200 mr-8  shadow-xl border-b-2 border-transparent hover:border-gray-100 last:mr-4" href="{{ item.link }}" {% if page.url == item.link %} {% endif %}>
+        <a class="font-serif text-base font-semibold block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-gray-200 mr-8 shadow-xl border-b-2 border-transparent hover:border-gray-100 last:mr-4" href="{{ item.link }}" {% if page.url == item.link %} {% endif %}>
           {{ item.name }}
         </a>
       {% endfor %}

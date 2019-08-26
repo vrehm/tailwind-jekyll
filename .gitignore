@@ -3,4 +3,4 @@ _site
 .jekyll-metadata
 assets/css
 node_modules
-env
+.env

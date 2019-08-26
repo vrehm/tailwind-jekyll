@@ -1,0 +1,21 @@
+---
+layout: blog
+title: Mon journal
+permalink: /mon-journal/
+pagination:
+  enabled: true
+---
+<div class="container mx-auto my-4 md:my-12 px-4 md:px-32">
+  <div class="flex flex-wrap">
+    <h1 class="text-gray-500 text-4xl text-center font-semibold w-full my-4">
+      Mon journal
+    </h1>
+    <cite class="mt-8 mb-8">{% include_cached blockquote.html %}</cite>
+    <nav id="blog-pagination" class="w-full">{% include_cached pagination.html %}</nav>
+    <section id="posts-horizontal-cards" class="w-full py-4">
+        {% for post in paginator.posts %}
+          {% include_cached horizontal-post-card.html %}
+        {% endfor %}
+    </section>
+  </div>
+</div>

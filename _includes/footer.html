@@ -1,21 +1,21 @@
-<footer class="flex flex-wrap bg-gray-700">
-    <div id="footer-menu" class="border border-black">
-      <a href="/" class="flex justify-center w-full">
-        <img class="h-24" src="https://res.cloudinary.com/dpnte3nr8/image/upload/v1566283523/pampam/logo-white_ydwah6.svg" alt="Logo de la marque">
+<footer class="flex flex-wrap bg-gray-700 justify-around">
+    <div id="footer-menu" class="w-full p-4 md:w-1/3 flex flex-wrap justify-center">
+      <a href="/" class="flex justify-center w-full md:pt-8">
+        <img class="h-8" src="/assets/logo-pampam-white.png" alt="Logo de la marque Atelier Pam Pam">
       </a>
-      <ul class="py-4 px-8">
+      <ul class="flex flex-wrap justify-center p-10">
         {% for item in site.data.footer %}
-          <li><a class="font-serif text-base font-semibold block mt-4 lg:inline-block lg:mt-0 text-gray-100 hover:text-gray-200 mr-8  shadow-xl border-b-2 border-transparent hover:border-gray-100 last:mr-4" href="{{ item.link }}">{{ item.name }}</a></li>
+          <li class="w-full"><a class="text-center w-full font-serif text-base font-semibold block lg:inline-block text-gray-100 hover:text-gray-200 border-b-2 border-transparent hover:border-gray-100" href="{{ item.link }}">{{ item.name }}</a></li>
         {% endfor %}
       </ul>
     </div>
 
-    <div id="showroom-address" class="border border-black">
+    <div id="showroom-address" class="w-full p-4 md:w-1/3">
       <div class="w-full text-center md:p-12">
         <div class="w-full font-serif text-base font-semibold text-gray-100 hover:text-gray-200 border-b-2 border-transparent">
           Mon Atelier & Boutique
         </div>
-        <div class="my-12 min-w-full"><a target="_blank" href="https://goo.gl/maps/UrL4bsbV2YLLCYpe6" class="bg-gray-900 hover:bg-transparent border-2 border-transparent hover:border-gray-900 text-white hover:text-gray-900 font-bold font-serif py-4 px-8 bg-gray-900 rounded-sm text-sm">Accéder à l'Itinéraire</a></div>
+        <div class="my-12 min-w-full"><a target="_blank" href="https://goo.gl/maps/UrL4bsbV2YLLCYpe6" class="bg-gray-900 hover:bg-transparent border-2 border-transparent hover:border-gray-900 text-white hover:text-gray-900 font-bold font-serif p-2 md:p-4 bg-gray-900 rounded-sm text-sm">Itinéraire</a></div>
         <div class="w-full font-serif text-base font-semibold text-gray-100 hover:text-gray-200 border-b-2 border-transparent">
           Les Puces du Canal
           <br>3 Rue Eugène Pottier, 69100 Villeurbanne
@@ -23,16 +23,30 @@
       </div>
     </div>
 
-    <div id="contact-details" class="border border-black">
-      <div class="flex">
-        <div class="w-1/3">Picto tête</div>
-        <div class="w-2/3">06 46 17 34 02</div>
-      </div>
-      <div class="w-full">atelierpampam (@) gmail.com</div>
-      <div class="flex">
-        <div class="w-1/3">Réseau 1</div>
-        <div class="w-1/3">Réseau 2</div>
-        <div class="w-1/3">Réseau 3</div>
+    <div id="contact-details" class="w-full p-4 md:w-1/3">
+      <div class="w-full text-center md:p-12">
+        <div class="min-w-full flex justify-center items-center">
+          <img class="w-8 h-8 rounded-full mr-4" src="/assets/cecile-missol-portrait.jpeg" alt="Portrait de Cécile Missol">
+          <span class="text-white text-base font-bold font-serif">06 46 17 34 02</span>
+        </div>
+        <div class="mt-10 mb-12 min-w-full">
+          <a target="_blank" href="mailto:atelierpampam@gmail.com" class="bg-gray-900 hover:bg-transparent border-2 border-transparent hover:border-gray-900 text-white hover:text-gray-900 font-bold font-serif p-2 md:p-4 bg-gray-900 rounded-sm text-sm">Contact email</a>
+        </div>
+        <div class="w-full flex justify-center h-24">
+          <a href="https://www.instagram.com/atelierpampam/" target="_blank">
+            <i class="text-4xl px-4 text-white fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/atelierpampam/" target="_blank">
+            <i class="text-4xl px-4 text-white fab fa-facebook-square"></i>
+          </a>
+          <a href="https://www.pinterest.com/atelierpampam/" target="_blank">
+            <i class="text-4xl px-4 text-white fab fa-pinterest-square"></i>
+          </a>
+        </div>
       </div>
     </div>
 </footer>
+
+{% if jekyll.environment == 'production' and site.analytics %}
+  {% include_cached cookie-consent.html %}
+{% endif %}
