@@ -20,10 +20,7 @@ window.addEventListener('scroll', function(e) {
     var pos = (window.pageYOffset - target.offsetTop) * target.dataset.rate;
 
     if(condition) {
-      console.log('ouf');
       target.style.transform = 'translate3d(0px,'+pos+'px, 0px)';
-    } else {
-      console.log('nouf')
     }
 });
 
