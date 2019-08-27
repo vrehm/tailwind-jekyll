@@ -5,8 +5,25 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/" # the subpath of your site if applicable, e.g. /blog
 url: "https://atelierpampam.fr" # the base hostname & protocol for your site, e.g. https://example.com
 incremental: true
+
+# jekyll SEO plugin
 author:
-  instagram: atelierpampam
+  name: Cécile Missol
+  twitter:
+    username: atelierpampam
+    card: summary
+  facebook:
+    # app_id: 1234
+    publisher: https://www.facebook.com/AtelierPamPam
+    # admins: 1234
+  logo: /assets/logo-pampam-reseaux.jpg
+  social:
+    name: Atelier PamPam
+    links:
+      - https://twitter.com/atelierpampam
+      - https://www.facebook.com/AtelierPamPam
+      - https://www.instagram.com/atelierpampam/
+      - https://www.pinterest.com/atelierpampam/
 
 # Permalink format (/blog/ is ignored for pages)
 permalink: /blog/:year/:month/:title
@@ -47,6 +64,7 @@ defaults:
     values:
       layout: "post" # set the correct default template for a post
       section: "post" # set the root section name
+      image: /assets/logo-pampam-reseaux.jpg
 
 # Build settings
 markdown: CommonMark
