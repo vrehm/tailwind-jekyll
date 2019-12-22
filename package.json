@@ -24,9 +24,10 @@
     "tailwindcss": "1.1.2"
   },
   "scripts": {
-    "build": "NODE_ENV=production gulp",
+    "build": "NODE_ENV=production gulp && npm run _encrypt",
     "build:dev": "gulp",
-    "start": "gulp serve"
+    "start": "gulp serve",
+    "_encrypt": "npx staticrypt _site/index.html test -o _site/index.html"
   },
   "repository": {
     "type": "git",
