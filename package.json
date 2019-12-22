@@ -27,7 +27,7 @@
     "build": "NODE_ENV=production gulp && npm run _encrypt",
     "build:dev": "gulp",
     "start": "gulp serve",
-    "_encrypt": "npx staticrypt _site/index.html test -o _site/index.html"
+    "_encrypt": "npx staticrypt _site/index.html Atelierpampam69 -o _site/index.html"
   },
   "repository": {
     "type": "git",
